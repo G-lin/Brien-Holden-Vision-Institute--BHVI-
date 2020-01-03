@@ -1,0 +1,429 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{72BD8FCE-4FC6-4D4F-B0A5-86155CCCD6C2}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>BHVI</RootNamespace>
+    <AssemblyName>BHVI</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="BouncyCastle.Crypto, Version=1.8.3.0, Culture=neutral, PublicKeyToken=0e99375e54769942">
+      <HintPath>packages\BouncyCastle.1.8.3.1\lib\BouncyCastle.Crypto.dll</HintPath>
+    </Reference>
+    <Reference Include="Google.Protobuf, Version=3.6.1.0, Culture=neutral, PublicKeyToken=a7d26565bac4d604, processorArchitecture=MSIL">
+      <HintPath>packages\Google.Protobuf.3.6.1\lib\net45\Google.Protobuf.dll</HintPath>
+    </Reference>
+    <Reference Include="MySql.Data, Version=8.0.18.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <HintPath>packages\MySql.Data.8.0.18\lib\net452\MySql.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="Renci.SshNet, Version=2016.1.0.0, Culture=neutral, PublicKeyToken=1cee9f8bde3db106, processorArchitecture=MSIL">
+      <HintPath>packages\SSH.NET.2016.1.0\lib\net40\Renci.SshNet.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Configuration.Install" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing.Design" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BankSlip.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BankSlip.Designer.cs">
+      <DependentUpon>BankSlip.cs</DependentUpon>
+    </Compile>
+    <Compile Include="dbConnection.cs" />
+    <Compile Include="deletePatient.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="deletePatient.Designer.cs">
+      <DependentUpon>deletePatient.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Finance summary.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Finance summary.Designer.cs">
+      <DependentUpon>Finance summary.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Finances.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Finances.Designer.cs">
+      <DependentUpon>Finances.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormsHomepage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormsHomepage.Designer.cs">
+      <DependentUpon>FormsHomepage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrameForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrameForm.Designer.cs">
+      <DependentUpon>FrameForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frames_stock.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frames_stock.Designer.cs">
+      <DependentUpon>frames_stock.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Homepage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Homepage.Designer.cs">
+      <DependentUpon>Homepage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LenseForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LenseForm.Designer.cs">
+      <DependentUpon>LenseForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="lense_stock.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="lense_stock.Designer.cs">
+      <DependentUpon>lense_stock.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Login.Designer.cs">
+      <DependentUpon>Login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Monitoring report.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Monitoring report.Designer.cs">
+      <DependentUpon>Monitoring report.cs</DependentUpon>
+    </Compile>
+    <Compile Include="non_stock.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="non_stock.Designer.cs">
+      <DependentUpon>non_stock.cs</DependentUpon>
+    </Compile>
+    <Compile Include="other reporting.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="other reporting.Designer.cs">
+      <DependentUpon>other reporting.cs</DependentUpon>
+    </Compile>
+    <Compile Include="patientForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="patientForm.Designer.cs">
+      <DependentUpon>patientForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PatientForm2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PatientForm2.Designer.cs">
+      <DependentUpon>PatientForm2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PatientHomePage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PatientHomePage.Designer.cs">
+      <DependentUpon>PatientHomePage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PaymentForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PaymentForm.Designer.cs">
+      <DependentUpon>PaymentForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Prescription form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Prescription form.Designer.cs">
+      <DependentUpon>Prescription form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Quote form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Quote form.Designer.cs">
+      <DependentUpon>Quote form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="receipt form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="receipt form.Designer.cs">
+      <DependentUpon>receipt form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="reportingHomepage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="reportingHomepage.Designer.cs">
+      <DependentUpon>reportingHomepage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="reportsHomepage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="reportsHomepage.Designer.cs">
+      <DependentUpon>reportsHomepage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Sales report by patient.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Sales report by patient.Designer.cs">
+      <DependentUpon>Sales report by patient.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Salesreport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Salesreport.Designer.cs">
+      <DependentUpon>Salesreport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="StocksHomepage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="StocksHomepage.Designer.cs">
+      <DependentUpon>StocksHomepage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Takingsreport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Takingsreport.Designer.cs">
+      <DependentUpon>Takingsreport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="updatePatient.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="updatePatient.Designer.cs">
+      <DependentUpon>updatePatient.cs</DependentUpon>
+    </Compile>
+    <Compile Include="viewPatient.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="viewPatient.Designer.cs">
+      <DependentUpon>viewPatient.cs</DependentUpon>
+    </Compile>
+    <Compile Include="viewPatientfinance.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="viewPatientfinance.Designer.cs">
+      <DependentUpon>viewPatientfinance.cs</DependentUpon>
+    </Compile>
+    <Compile Include="viewPatientframe.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="viewPatientframe.Designer.cs">
+      <DependentUpon>viewPatientframe.cs</DependentUpon>
+    </Compile>
+    <Compile Include="viewPatientlense.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="viewPatientlense.Designer.cs">
+      <DependentUpon>viewPatientlense.cs</DependentUpon>
+    </Compile>
+    <Compile Include="viewPatientspv.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="viewPatientspv.Designer.cs">
+      <DependentUpon>viewPatientspv.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="BankSlip.resx">
+      <DependentUpon>BankSlip.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="deletePatient.resx">
+      <DependentUpon>deletePatient.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Finance summary.resx">
+      <DependentUpon>Finance summary.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Finances.resx">
+      <DependentUpon>Finances.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormsHomepage.resx">
+      <DependentUpon>FormsHomepage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrameForm.resx">
+      <DependentUpon>FrameForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Homepage.resx">
+      <DependentUpon>Homepage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LenseForm.resx">
+      <DependentUpon>LenseForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Login.resx">
+      <DependentUpon>Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Monitoring report.resx">
+      <DependentUpon>Monitoring report.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="other reporting.resx">
+      <DependentUpon>other reporting.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="patientForm.resx">
+      <DependentUpon>patientForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PatientForm2.resx">
+      <DependentUpon>PatientForm2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PatientHomePage.resx">
+      <DependentUpon>PatientHomePage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PaymentForm.resx">
+      <DependentUpon>PaymentForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Prescription form.resx">
+      <DependentUpon>Prescription form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="Quote form.resx">
+      <DependentUpon>Quote form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="receipt form.resx">
+      <DependentUpon>receipt form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="reportingHomepage.resx">
+      <DependentUpon>reportingHomepage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="reportsHomepage.resx">
+      <DependentUpon>reportsHomepage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sales report by patient.resx">
+      <DependentUpon>Sales report by patient.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Salesreport.resx">
+      <DependentUpon>Salesreport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StocksHomepage.resx">
+      <DependentUpon>StocksHomepage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Takingsreport.resx">
+      <DependentUpon>Takingsreport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="updatePatient.resx">
+      <DependentUpon>updatePatient.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="viewPatient.resx">
+      <DependentUpon>viewPatient.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="viewPatientfinance.resx">
+      <DependentUpon>viewPatientfinance.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="viewPatientframe.resx">
+      <DependentUpon>viewPatientframe.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="viewPatientlense.resx">
+      <DependentUpon>viewPatientlense.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="viewPatientspv.resx">
+      <DependentUpon>viewPatientspv.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\web - 1366 x 768%402x.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\web - 1366 x 768.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-login-rounded-40.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-delete-32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-home-48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-home-24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-save-40.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-search-30.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-update-30.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-clear-symbol-40.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\add.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-find-user-male-40%281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-change-user-40.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\delet.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-print-40.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
