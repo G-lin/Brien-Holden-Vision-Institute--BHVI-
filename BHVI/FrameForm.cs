@@ -84,6 +84,9 @@ namespace BHVI
                     Finances f = new Finances(lpno.Text, tot);
                     f.Show(this);
                     this.Hide();/*
+
+                    viewPatient v = new viewPatient();
+                    v.retrieve();
                 }
             }*/
         }

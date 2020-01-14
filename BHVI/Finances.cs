@@ -128,6 +128,9 @@ namespace BHVI
                     PatientHomePage p = new PatientHomePage();
                     p.Show(this);
                     this.Hide();
+
+                    viewPatient v = new viewPatient();
+                    v.retrieve();
                 }
             }
         }

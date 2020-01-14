@@ -13,7 +13,6 @@ namespace BHVI
 {
     public partial class PatientForm2 : Form
     {
-
         dbConnection db = new dbConnection();
 
         public PatientForm2(String patientNumber)
@@ -81,12 +80,18 @@ namespace BHVI
                         LenseForm l = new LenseForm(lpno.Text);
                         l.Show(this);
                         this.Hide();
+                /*
+                        viewPatientspv v = new viewPatientspv();
+                        v.retrieve();*/
                     }
                     else
                     {
                         PatientHomePage p = new PatientHomePage();
                         p.Show(this);
                         this.Hide();
+                /*
+                        viewPatientspv v = new viewPatientspv();
+                        v.retrieve();*/
                     }
                     /*
                 }

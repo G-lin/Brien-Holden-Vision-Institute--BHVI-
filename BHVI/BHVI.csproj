@@ -78,6 +78,30 @@
     <Compile Include="deletePatient.Designer.cs">
       <DependentUpon>deletePatient.cs</DependentUpon>
     </Compile>
+    <Compile Include="deletePatientFinance.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="deletePatientFinance.Designer.cs">
+      <DependentUpon>deletePatientFinance.cs</DependentUpon>
+    </Compile>
+    <Compile Include="deletePatientFrame.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="deletePatientFrame.Designer.cs">
+      <DependentUpon>deletePatientFrame.cs</DependentUpon>
+    </Compile>
+    <Compile Include="deletePatientLense.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="deletePatientLense.Designer.cs">
+      <DependentUpon>deletePatientLense.cs</DependentUpon>
+    </Compile>
+    <Compile Include="deletePatientSPV.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="deletePatientSPV.Designer.cs">
+      <DependentUpon>deletePatientSPV.cs</DependentUpon>
+    </Compile>
     <Compile Include="Finance summary.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -236,6 +260,30 @@
     <Compile Include="updatePatient.Designer.cs">
       <DependentUpon>updatePatient.cs</DependentUpon>
     </Compile>
+    <Compile Include="updatePatientFinance.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="updatePatientFinance.Designer.cs">
+      <DependentUpon>updatePatientFinance.cs</DependentUpon>
+    </Compile>
+    <Compile Include="updatePatientFrame.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="updatePatientFrame.Designer.cs">
+      <DependentUpon>updatePatientFrame.cs</DependentUpon>
+    </Compile>
+    <Compile Include="updatePatientLense.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="updatePatientLense.Designer.cs">
+      <DependentUpon>updatePatientLense.cs</DependentUpon>
+    </Compile>
+    <Compile Include="updatePatientSPV.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="updatePatientSPV.Designer.cs">
+      <DependentUpon>updatePatientSPV.cs</DependentUpon>
+    </Compile>
     <Compile Include="viewPatient.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -271,6 +319,18 @@
     </EmbeddedResource>
     <EmbeddedResource Include="deletePatient.resx">
       <DependentUpon>deletePatient.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="deletePatientFinance.resx">
+      <DependentUpon>deletePatientFinance.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="deletePatientFrame.resx">
+      <DependentUpon>deletePatientFrame.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="deletePatientLense.resx">
+      <DependentUpon>deletePatientLense.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="deletePatientSPV.resx">
+      <DependentUpon>deletePatientSPV.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Finance summary.resx">
       <DependentUpon>Finance summary.cs</DependentUpon>
@@ -351,6 +411,18 @@
     <EmbeddedResource Include="updatePatient.resx">
       <DependentUpon>updatePatient.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="updatePatientFinance.resx">
+      <DependentUpon>updatePatientFinance.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="updatePatientFrame.resx">
+      <DependentUpon>updatePatientFrame.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="updatePatientLense.resx">
+      <DependentUpon>updatePatientLense.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="updatePatientSPV.resx">
+      <DependentUpon>updatePatientSPV.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="viewPatient.resx">
       <DependentUpon>viewPatient.cs</DependentUpon>
     </EmbeddedResource>
@@ -366,6 +438,7 @@
     <EmbeddedResource Include="viewPatientspv.resx">
       <DependentUpon>viewPatientspv.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="ClassDiagram1.cd" />
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

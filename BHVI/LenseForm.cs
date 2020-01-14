@@ -54,12 +54,18 @@ namespace BHVI
                         FrameForm f = new FrameForm(lpno.Text, txtlsprice.Text);
                         f.Show(this);
                         this.Hide();
+                
+                        viewPatientlense v = new viewPatientlense();
+                        v.retrieve();
                     }
                     else
                     {
                         Finances f = new Finances(lpno.Text, float.Parse(txtlsprice.Text));
                         f.Show(this);
                         this.Hide();
+
+                        viewPatientlense v = new viewPatientlense();
+                        v.retrieve();
                     }/*
 
                 }

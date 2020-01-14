@@ -21,6 +21,14 @@ namespace BHVI
             InitializeComponent();
         }
 
+        /*public delegate void UpdateDelegate(object sender, UpdateEventArgs args);
+        public event UpdateDelegate UpdateEventHandler;
+
+        public class UpdateEventArgs : EventArgs
+        {
+            public string Data { get; set; }
+        }*/
+
         public void patientForm_Load(object sender, EventArgs e)
         {
         }
@@ -193,6 +201,9 @@ namespace BHVI
                     PatientForm2 p = new PatientForm2(txtpno.Text);
                     p.Show();
                     this.Hide();/*
+
+                    viewPatient v = new viewPatient();
+                    v.retrieve();
                 }
 
                 

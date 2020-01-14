@@ -51,5 +51,12 @@ namespace BHVI
             v.Show(this);
             this.Hide();
         }
+
+        private void btnHome_Click(object sender, EventArgs e)
+        {
+            PatientHomePage h = new PatientHomePage();
+            h.Show(this);
+            this.Hide();
+        }
     }
 }

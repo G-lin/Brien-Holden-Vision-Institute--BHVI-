@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MySql.Data.MySqlClient;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,6 +13,11 @@ namespace BHVI
 {
     public partial class viewPatientframe : Form
     {
+        dbConnection db = new dbConnection();
+        DataTable dt = new DataTable();
+        MySqlCommand cmd;
+        MySqlDataAdapter adapter;
+
         public viewPatientframe()
         {
             InitializeComponent();
@@ -50,6 +56,23 @@ namespace BHVI
             viewPatientfinance v = new viewPatientfinance();
             v.Show(this);
             this.Hide();
+        }
+
+        private void btnHome_Click(object sender, EventArgs e)
+        {
+            PatientHomePage h = new PatientHomePage();
+            h.Show(this);
+            this.Hide();
+        }
+
+        private void label2_MouseClick(object sender, MouseEventArgs e)
+        {
+
+        }
+
+        private void dgvpdetails_MouseClick(object sender, MouseEventArgs e)
+        {
+            lpatientID.Text = dgvpdetails.SelectedRows[0].Cells[1].Value.ToString();
         }
     }
 }
